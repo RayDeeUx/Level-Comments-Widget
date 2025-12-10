@@ -16,6 +16,10 @@
 		"homepage": "https://t.me/LatterRarity70",
 		"source": "https://github.com/LatterRarity70/Level-Comments-Widget"
 	},
+	"dependencies": {
+		"geode.node-ids": ">=1.21.0",
+		"alk.better-touch-prio": ">=1.0.4"
+	},
 	"tags": [ "online", "interface", "enhancement" ],
 	"settings": {
 		"show-left-side-menu": {
