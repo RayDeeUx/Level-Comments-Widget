@@ -110,7 +110,7 @@ class $modify(PlayLayerExt, PlayLayer) {
             static_cast<InfoLayer*>(info)->scheduleOnce(schedule_selector(InfoLayerUpdater::reload), 1.f);
 		}
 	}
-    virtual void setupHasCompleted() {
+    void setupHasCompleted() {
 		PlayLayer::setupHasCompleted();
         if (!m_level || !m_uiLayer) return;
         if (m_level->m_levelType == GJLevelType::Editor || m_level->m_levelType == GJLevelType::Main) return;
