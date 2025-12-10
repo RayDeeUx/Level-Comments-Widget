@@ -107,7 +107,7 @@ class $modify(PlayLayerExt, PlayLayer) {
 	}
     void updateInfoLayerLive(float) { //meant to be called on scene
 		if (auto info = m_uiLayer->getChildByID("comment-widget"_spr)) {
-            static_cast<InfoLayer*>(info)->scheduleOnce(schedule_selector(InfoLayerUpdater::reload), 0.f);
+            static_cast<InfoLayer*>(info)->scheduleOnce(schedule_selector(InfoLayerUpdater::reload), 1.f);
 		}
 	}
     virtual void setupHasCompleted() {
@@ -120,6 +120,6 @@ class $modify(PlayLayerExt, PlayLayer) {
         info->setID("comment-widget"_spr);
         m_uiLayer->addChild(info);
         this->schedule(schedule_selector(PlayLayerExt::updateInfoLayer));
-        this->schedule(schedule_selector(PlayLayerExt::updateInfoLayerLive), 5.f);
+        this->schedule(schedule_selector(PlayLayerExt::updateInfoLayerLive), 1.f);
     };
 };
