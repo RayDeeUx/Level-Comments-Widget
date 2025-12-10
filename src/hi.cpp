@@ -113,6 +113,7 @@ class $modify(PlayLayerExt, PlayLayer) {
     virtual void setupHasCompleted() {
 		PlayLayer::setupHasCompleted();
         if (!m_level || !m_uiLayer) return;
+        if (m_level->m_levelType == GJLevelType::Editor || m_level->m_levelType == GJLevelType::Main) return;
         auto info = InfoLayer::create(m_level, nullptr, nullptr);
         info->setMouseEnabled(false);
         info->setTouchEnabled(false);
